@@ -36,7 +36,7 @@
 	.site-icon {
 		clear: both;
 		float: left;
-		margin: 3px 6px 0 0;
+		margin: 4px 6px 0 0;
 	}
 }
 
@@ -161,7 +161,7 @@
 
 .reader-start-card__site-info {
 	float: left;
-	width: 34%;
+	width: 40%;
 }
 
 .reader-start-card__site-title {
@@ -239,7 +239,7 @@
 	    letter-spacing: .03em;
 	    padding: 5px 0 0 3px;
 		position: absolute;
-			top: 78px;
+			top: 0;
 	    text-transform: uppercase;
 	    z-index: 1;
     }
@@ -309,12 +309,24 @@
 		.gridicon {
 			fill: $white;
 		}
+
+		&:hover {
+			border-color: lighten( $gray, 20% );
+
+			.follow-button__label {
+				color: lighten( $gray, 20% );
+			}
+
+			.gridicon {
+				fill: lighten( $gray, 20% );
+			}
+		}
 	}
 
 	.reader-start-post-preview__featured-label {
 		opacity: .75;
 		position: absolute;
-			top: 126px;
+			top: 120px;
 			left: 3px;
 	}
 
