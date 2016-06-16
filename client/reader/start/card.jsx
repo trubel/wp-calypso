@@ -12,6 +12,7 @@ import StartPostPreview from './post-preview';
 import StartCardHeader from './card-header';
 import { recordRecommendationInteraction } from 'state/reader/start/actions';
 import { getRecommendationById } from 'state/reader/start/selectors';
+import { getPostBySiteAndId } from 'state/reader/posts/selectors';
 
 const debug = debugModule( 'calypso:reader:start' ); //eslint-disable-line no-unused-vars
 
@@ -25,12 +26,13 @@ const StartCard = React.createClass( {
 	},
 
 	render() {
-		const { siteId, postId } = this.props;
+		const { siteId, postId, post } = this.props;
 
 		const cardClasses = classnames(
 			'reader-start-card',
 			{
-				'has-post-preview': ( postId > 0 )
+				'has-post-preview': ( postId > 0 ),
+				'is-photo': post && post.excerpt.length < 1
 			}
 		);
 
@@ -56,7 +58,8 @@ export default connect(
 		return {
 			recommendation,
 			siteId,
-			postId
+			postId,
+			post: getPostBySiteAndId( state, siteId, postId )
 		};
 	},
 	( dispatch ) => bindActionCreators( {
