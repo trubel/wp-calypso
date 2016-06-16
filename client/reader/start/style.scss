@@ -130,8 +130,14 @@
 
 	.follow-button.is-following {
 
+		border-color: $alert-green;
+
 		.follow-button__label {
 			color: $alert-green;
+		}
+
+		.gridicon {
+			fill: $alert-green;
 		}
 
 		&:hover {
