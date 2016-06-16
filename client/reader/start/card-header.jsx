@@ -13,7 +13,7 @@ const StartCardHeader = ( { site } ) => {
 	return (
 		<header className="reader-start-card__header">
 			<a href={ `/read/blogs/${site.ID}` }>
-				<SiteIcon site={ site } size={ 40 } />
+				<SiteIcon site={ site } size={ 30 } />
 			</a>
 			<div className="reader-start-card__site-info">
 				<a href={ `/read/blogs/${site.ID}` }>
