@@ -166,7 +166,6 @@
 
 .reader-start-card__site-title {
 	display: block;
-	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.2;
     font-size: 13px;
@@ -196,6 +195,11 @@
 	float: left;
 	font-size: 12px;
 	font-weight: 600;
+	display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 
 	a {
 		color: inherit;
@@ -268,6 +272,13 @@
 		.reader-start-post-preview__post-content {
 			margin-top: -98px;
 		}
+	}
+}
+
+.is-photo {
+
+	.reader-start-post-preview__featured-image {
+		height: 180px;
 	}
 }
 

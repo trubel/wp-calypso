@@ -47,7 +47,7 @@ const StartPostPreview = React.createClass( {
 		const hasExcerpt = post.excerpt.length > 0;
 		const articleClasses = classNames( 'reader-start-post-preview', {
 			'is-photo': ! hasExcerpt,
-			'has-image': hasExcerpt && !! headerImageUrl
+			'has-image': !! headerImageUrl
 		} );
 
 		return (
