@@ -44,13 +44,10 @@ const StartPostPreview = React.createClass( {
 			};
 		}
 
+		const hasExcerpt = post.excerpt.length > 0;
 		const articleClasses = classNames( 'reader-start-post-preview', {
-			'is-photo': post.excerpt.length < 1
-		} );
-
-		// Only apply has-image class if we have a featured image
-		const labelClasses = classNames( 'reader-start-post-preview', {
-			'has-image': !! headerImageUrl
+			'is-photo': ! hasExcerpt,
+			'has-image': hasExcerpt && !! headerImageUrl
 		} );
 
 		return (
