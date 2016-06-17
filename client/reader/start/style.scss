@@ -339,7 +339,7 @@
 	}
 
 	.reader-start-post-preview__post-content {
-		margin-top: -53px;
+		margin-top: 150px;
 		padding: 0 10px;
 		position: relative;
 		z-index: 1;
@@ -347,11 +347,7 @@
 		.reader-start-post-preview__title {
 			color: $white;
 		    display: block;
-		    overflow: hidden;
 		    position: relative;
-		    text-overflow: ellipsis;
-		    white-space: nowrap;
-		    width: 100%;
 		    z-index: 1;
 		}
 
@@ -365,6 +361,11 @@
 	}
 
 	.reader-start-post-preview__featured-image {
+
+		min-height: 200px;
+		position: absolute;
+		height: 100%;
+		width: 100%;
 
 		&.is-dark:before {
 			background: $gray-dark;
@@ -386,10 +387,6 @@
 
 	.site-icon {
 		display: none;
-	}
-
-	.reader-start-post-preview__featured-image {
-		height: 200px;
 	}
 }
 
